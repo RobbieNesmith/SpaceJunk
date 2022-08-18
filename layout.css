@@ -1,0 +1,56 @@
+main {
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem rgba(0, 0, 0, 0.2);
+    border: solid #333 1px;
+    margin-top: 2rem;
+}
+
+nav .links {
+    border-radius: 0 0 1rem 1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .general-about {
+        perspective: 1000px;
+    }
+
+    .profile-pic {
+        width: 160px;
+        height: 160px;
+        animation-name: verticalRotate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+    }
+
+    .profile-pic::after {
+        position: absolute;
+        left: 0;
+        content: "";
+        width: 160px;
+        height: 160px;
+        background-image: url("https://raw.githubusercontent.com/RobbieNesmith/SpaceJunk/master/robbiesclub.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: rotateY(180deg);
+        display: inline-block;
+        z-index: -1;
+    }
+
+    .profile-pic img {
+        width: 100%;
+        height: 100%;
+    }
+
+    @keyframes verticalRotate {
+        from {
+            transform: rotateY(0);
+        }
+
+        to {
+            transform: rotateY(360deg);
+        }
+    }
+}
