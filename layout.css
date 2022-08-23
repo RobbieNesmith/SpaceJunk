@@ -1,12 +1,71 @@
+body {
+    background: black url("https://raw.githubusercontent.com/RobbieNesmith/SpaceJunk/master/stars.png");
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0), #1f0e56df 50%, #c8813d 60%, #fcf49f 70%, #260e00 70%, #08251f);
+    background-attachment: fixed;
+    z-index: -1;
+}
+
 main {
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 0 1px #264709,
+        0 0 0 2px lime,
+        0 0 0 3px #bfffab,
+        0 0 0 4px #264709,
+        0 0 0 6px black;
     border-radius: 1rem;
-    box-shadow: 0 0.5rem rgba(0, 0, 0, 0.2);
-    border: solid #333 1px;
     margin-top: 2rem;
 }
 
-nav .links {
+nav {
+    background-color: black;
     border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 -1px 0 1px #151e36,
+        0 0 0 2px #1d4ed8,
+        0 0 0 3px #87a7ff,
+        0 0 0 4px #151e36,
+        0 0 0 6px black;
+}
+
+nav .top,
+nav .links {
+    background-color: unset;
+}
+
+.details-table {
+    color: black;
+}
+
+.profile .contact .heading,
+.profile .table-section .heading {
+    border-bottom: solid 2px var(--lighter-blue);
+    background: unset;
+}
+
+.profile .friends .heading,
+.profile .blurbs .heading {
+    background: unset;
+    border: solid 2px var(--light-orange);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0 -1px 0 1px #151e36,
+        0 0 0 2px #1d4ed8,
+        0 0 0 3px #87a7ff,
+        0 0 0 4px #151e36,
+        0 0 0 6px black;
 }
 
 @media (prefers-reduced-motion: no-preference) {
