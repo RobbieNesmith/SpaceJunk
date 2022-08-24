@@ -14,7 +14,8 @@ body::before {
 }
 
 main {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(25px);
     color: white;
     box-shadow: 0 0 0 1px #264709,
         0 0 0 2px lime,
@@ -26,13 +27,48 @@ main {
 }
 
 nav {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(25px);
     border-radius: 0 0 1rem 1rem;
-    box-shadow: 0 -1px 0 1px #151e36,
+    box-shadow: 0 0 0 1px #151e36,
         0 0 0 2px #1d4ed8,
         0 0 0 3px #87a7ff,
         0 0 0 4px #151e36,
         0 0 0 6px black;
+}
+
+#q {
+    background-color: black;
+    color: white;
+    border: none;
+    height: 20px;
+    box-shadow: 0 0 0 1px #151e36,
+        0 0 0 2px #1d4ed8,
+        0 0 0 3px #87a7ff,
+        0 0 0 4px #151e36;
+    border-radius: 1rem 0 0 1rem;
+    padding-left: 1rem;
+}
+
+.center form button {
+    height: 20px;
+    border-radius: 0 1rem 1rem 0;
+    background-color: #1d4ed8;
+    border: none;
+    box-shadow: 0 0 0 2px #1d4ed8,
+        0 0 0 3px #87a7ff,
+        0 0 0 4px #151e36;
+    color: #87a7ff;
+    text-shadow: 0 1px black;
+    transition: background-color 0.1s, color 0.1s;
+}
+
+.center form button:hover {
+    background-color: #87a7ff;
+    color: white;
+    box-shadow: 0 0 0 2px #87a7ff,
+        0 0 0 3px #87a7ff,
+        0 0 0 4px #151e36;
 }
 
 nav .top,
@@ -40,8 +76,27 @@ nav .links {
     background-color: unset;
 }
 
+nav .links a:hover {
+    color: var(--dark-orange);
+}
+
 .details-table {
     color: black;
+}
+
+.details-table td {
+    background: none;
+    border-bottom: solid var(--lightest-blue) 2px;
+    color: white;
+}
+
+.details-table tr:last-child td {
+    border: none;
+}
+
+.details-table td:first-child {
+    background: none;
+    border-bottom: solid var(--even-lighter-blue) 2px;
 }
 
 .profile .contact .heading,
@@ -54,18 +109,40 @@ nav .links {
 .profile .blurbs .heading {
     background: unset;
     border: solid 2px var(--light-orange);
+    border-radius: .5rem;
+}
+
+.profile .friends .heading h4,
+.profile .blurbs .heading h4 {
+    color: #df9b27;
+}
+
+.profile .friends .person p {
+    color: white;
+}
+
+.profile .contact,
+.profile .url-info,
+.profile .table-section,
+.home-actions {
+    border-radius: 0.5rem;
 }
 
 footer {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(25px);
     color: white;
     border-radius: 1rem;
     margin-top: 2rem;
-    box-shadow: 0 -1px 0 1px #151e36,
-        0 0 0 2px #1d4ed8,
-        0 0 0 3px #87a7ff,
-        0 0 0 4px #151e36,
+    box-shadow: 0 0 0 1px #36151e,
+        0 0 0 2px #d81d4e,
+        0 0 0 3px #ff87a7,
+        0 0 0 4px #36151e,
         0 0 0 6px black;
+}
+
+a {
+    color: var(--logo-blue);
 }
 
 @media (prefers-reduced-motion: no-preference) {
